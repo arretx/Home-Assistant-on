@@ -1,20 +1,20 @@
 homeassistant:
   # Name of the location where Home Assistant is running
-  name: Homers
+  name: !secret homeassistant_name
   # Location required to calculate the time the sun rises and sets
-  latitude: 33.4656
-  longitude: -111.9253
+  latitude: !secret homeassistant_latitude
+  longitude: !secret homeassistant_longitude
   # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 374
+  elevation: !secret homeassistant_elevation
   # metric for Metric, imperial for Imperial
   unit_system: imperial
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Phoenix
+  time_zone: !secret homeassistant_time_zone
   # Customization file
   customize: !include customize.yaml
 
 # Show links to resources in log and frontend
-introduction:
+# introduction:
 
 # Enables the frontend
 frontend:
@@ -23,10 +23,10 @@ frontend:
 config:
 
 http:
-  # Secrets are defined in the file secrets.yaml
-  # api_password: !secret http_password
+  # Uncomment this to add a password (recommended!)
+  #api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
+  base_url: !secret http_base_url
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -37,8 +37,12 @@ updater:
   # Optional, allows Home Assistant developers to focus on popular components.
   # include_used_components: true
 
+ios:
+
 # Discover some devices automatically
 discovery:
+  ignore:
+   - samsung_tv
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -59,8 +63,26 @@ sensor: !include_dir_merge_list config/sensors/
 tts:
   - platform: google
 
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
+#Spotify
+media_player:
+  - platform: spotify
+    client_id: !secret spotify_client_id
+    client_secret: !secret spotify_client_secret
+
+##########
+#  All include folders for configuration.yaml
+##########
+
+automation: !include_dir_merge_list automation/
+camera: !include_dir_merge_list config/cameras/
+group: !include_dir_merge_named config/group/
+input_boolean: !include_dir_merge_named config/input_boolean/
+script: !include_dir_merge_named config/scripts/
+sensor: !include_dir_merge_list config/sensors/
+zone: !include_dir_merge_named config/zones/
+
+ifttt:
+  key: !secret ifttt_key
+
 mqtt:
   broker: core-mosquitto
