@@ -56,9 +56,6 @@ logbook:
 # Track the sun
 sun:
 
-# Weather prediction
-sensor: !include_dir_merge_list config/sensors/
-
 # Text to speech
 tts:
   - platform: google
@@ -85,4 +82,9 @@ ifttt:
   key: !secret ifttt_key
 
 mqtt:
-  broker: core-mosquitto
+  broker: 192.168.1.13
+  username: arretx
+  password: J0n@th@n
+
+#device_tracker:
+  #- platform: owntracks
