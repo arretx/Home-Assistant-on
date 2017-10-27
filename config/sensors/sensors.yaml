@@ -1,0 +1,15 @@
+#### TIME/DATE ##################################
+- platform: time_date
+  display_options:
+      - 'time'
+      - 'date'
+
+- platform: worldclock
+  time_zone: America/Phoenix
+  name: 'Phoenix'
+
+- platform: yr
+
+- platform: uptime
+  name: Up Time
+  unit_of_measurement: hours
