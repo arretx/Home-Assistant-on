@@ -94,3 +94,6 @@ mqtt:
 device_tracker:
   - platform: owntracks
     waypoints: true
+    waypoint_whitelist:
+      - arretx
+      - bizzerk2
