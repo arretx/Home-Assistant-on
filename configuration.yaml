@@ -27,6 +27,8 @@ http:
   #api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret http_base_url
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
 
 # Checks for available updates
 # Note: This component will send some information about your system to
@@ -76,15 +78,17 @@ group: !include_dir_merge_named config/group/
 input_boolean: !include_dir_merge_named config/input_boolean/
 script: !include_dir_merge_named config/scripts/
 sensor: !include_dir_merge_list config/sensors/
-zone: !include_dir_merge_named config/zones/
+zone: !include_dir_merge_list config/zones/
 
+# IFTTT Configuration
 ifttt:
   key: !secret ifttt_key
 
+# Mosquitto Broker Settings
 mqtt:
-  broker: 192.168.1.13
-  username: arretx
-  password: J0n@th@n
+  broker: !secret mqtt_broker
+  username: !secret mqtt_username
+  password: !secret mqtt_password
 
-#device_tracker:
-  #- platform: owntracks
+device_tracker:
+  - platform: owntracks
