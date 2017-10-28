@@ -2,7 +2,7 @@ jons_iphone_7:
   hide_if_away: false
   icon:
   mac:
-  name: jons iphone 7
+  name: Jon's Phone
   picture:
   track: true
   vendor:
@@ -10,8 +10,26 @@ jons_iphone_7:
 melanies_iphone_red:
   hide_if_away: false
   icon:
-  mac:
-  name: melanies iphone red
+  mac: 98:10:E8:E8:9B:03
+  name: Melanie's Phone
   picture:
   track: true
+  vendor:
+
+arretx_c342f3bdedc346bd96e560448368a604:
+  hide_if_away: false
+  icon:
+  mac:
+  name: arretx
+  picture:
+  track: true
+  vendor:
+
+arretx_45:
+  hide_if_away: false
+  icon:
+  mac:
+  name: arretx
+  picture:
+  track: yes
   vendor:

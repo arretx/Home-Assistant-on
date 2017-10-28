@@ -43,8 +43,6 @@ ios:
 
 # Discover some devices automatically
 discovery:
-  ignore:
-   - samsung_tv
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -57,6 +55,9 @@ logbook:
 
 # Track the sun
 sun:
+
+# media_player
+map:
 
 # Text to speech
 tts:
