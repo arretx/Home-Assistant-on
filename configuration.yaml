@@ -93,3 +93,4 @@ mqtt:
 
 device_tracker:
   - platform: owntracks
+    waypoints: true

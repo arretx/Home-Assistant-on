@@ -1,38 +1,51 @@
+- name: Home
+  latitude: 33.522370
+  longitude: -111.901580
+  radius: 30
+  icon: mdi:account-multiple
+  track_ios: false
+
 - name:  CrossFit Infinite Strength
   latitude: 33.557061
   longitude: -111.887550
   radius: 50
   icon: mdi:weight-kilogram
+  track_ios: false
 
 - name:  New Valley Church
   latitude: 33.307875
   longitude: -111.977550
   radius: 75
   icon: mdi:church
+  track_ios: false
 
 - name: Basha's Grocery
   latitude: 33.522665
   longitude: -111.899078
   radius: 75
   icon: mdi:store
+  track_ios: false
 
 - name: Sally's House
   latitude: 33.504765
   longitude: -111.914867
   radius: 30
   icon: mdi:home
+  track_ios: false
 
 - name: September's House
   latitude: 33.561837
   longitude: -112.055447
   radius: 30
   icon: mdi:home
+  track_ios: false
 
 - name: Costco Scottsdale
   latitude: 33.622948
   longitude: -111.900721
   radius: 100
   icon: mdi:store
+  track_ios: false
 
 - name: Costco Paradise Valley Mall
   latitude: 33.603524

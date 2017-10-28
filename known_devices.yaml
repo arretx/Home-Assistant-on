@@ -4,32 +4,32 @@ jons_iphone_7:
   mac:
   name: Jon's Phone
   picture:
-  track: true
+  track: no
   vendor:
 
 melanies_iphone_red:
   hide_if_away: false
   icon:
-  mac: 98:10:E8:E8:9B:03
+  mac: 
   name: Melanie's Phone
   picture:
-  track: true
+  track: no
   vendor:
 
-arretx_c342f3bdedc346bd96e560448368a604:
+arretx_jons_phone:
   hide_if_away: false
   icon:
   mac:
-  name: arretx
-  picture:
-  track: true
-  vendor:
-
-arretx_45:
-  hide_if_away: false
-  icon:
-  mac:
-  name: arretx
+  name: Jon's Phone
   picture:
   track: yes
+  vendor:
+
+arretx_melanies_phone:
+  hide_if_away: false
+  icon:
+  mac:
+  name: arretx
+  picture:
+  track: true
   vendor:
