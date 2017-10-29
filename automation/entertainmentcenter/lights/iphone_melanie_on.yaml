@@ -18,7 +18,7 @@
       - condition: time
         before: '22:00:00'
       - condition: state
-        entity_id: device_tracker.melanies_iphone_red
+        entity_id: device_tracker.bizzerk2_melanies_phone
         state: 'home'
       - condition: state
         entity_id: switch.entertainment_center

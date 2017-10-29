@@ -1,23 +1,20 @@
 - alias: 'Turn Off Entertainment Center TV'
   trigger:
     - platform: state
-      entity_id: device_tracker.jons_iphone_7
-      to: 'not_home'
+      entity_id: device_tracker.arretx_jons_phone
+      from: 'home'
     - platform: state
-      entity_id: device_tracker.melanies_iphone_red
-      to: 'not_home'
+      entity_id: device_tracker.bizzerk2_melanies_phone
+      from: 'home'
   condition:
     condition: and
     conditions:
       - condition: state
-        entity_id: device_tracker.melanies_iphone_red
+        entity_id: device_tracker.bizzerk2_melanies_phone
         state: 'not_home'
       - condition: state
-        entity_id: device_tracker.jons_iphone_7
+        entity_id: device_tracker.arretx_jons_phone
         state: 'not_home'
   action:
     - service: switch.turn_off
       entity_id: group.entertainment_center
-    - service: notify.ios_jons_iphone_7
-      data:
-        message: "Entertainment Center is Off"

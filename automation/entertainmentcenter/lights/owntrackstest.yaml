@@ -1,13 +1,13 @@
 # Testing MQTT OwnTracks Automation
 #
 #
-- alias: 'Owntracks Test'
-  trigger:
-    platform: zone
-    entity_id: device_tracker.arretx_jons_phone
-    zone: zone.home
-    event: leave
-  condition:
-  action:
-    - service: switch.turn_on
-      entity_id: switch.entertainment_center
+#- alias: 'Owntracks Test'
+#  trigger:
+#    platform: zone
+#    entity_id: device_tracker.arretx_jons_phone
+#    zone: zone.home
+#    event: leave
+#  condition:
+#  action:
+#    - service: switch.turn_on
+#      entity_id: switch.entertainment_center

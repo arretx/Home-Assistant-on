@@ -15,12 +15,3 @@ bizzerk2_melanies_phone:
   picture: /local/images/iconmelanie.jpg
   track: yes
   vendor:
-
-jons_iphone_7:
-  hide_if_away: false
-  icon:
-  mac:
-  name: jons iphone 7
-  picture:
-  track: true
-  vendor:
