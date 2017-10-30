@@ -21,22 +21,3 @@
       data:
         media_content_type: playlist
         media_content_id: spotify:user:arretx:playlist:4nm96JMjqnfIkjh6LzeLsP
-
- - alias: 'Spotify Off'
-   trigger:
-     platform: time
-     minutes: '/1'
-     seconds: 00
-   condition:
-     condition: time
-     before: '06:00:00'
-     after: '24:00:00'
-     weekday:
-       - sun
-   action:
-     - service: media_player.turn_off
-       entity_id: media_player.spotify
-     - service: media_player.select_source
-       data:
-         entity_id: media_player.spotify
-         source: Jon's MacBook Air

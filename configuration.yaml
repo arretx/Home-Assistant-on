@@ -24,7 +24,7 @@ config:
 
 http:
   # Uncomment this to add a password (recommended!)
-  #api_password: !secret http_password
+  api_password: !secret http_password
   # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
   base_url: !secret http_base_url
   ssl_certificate: !secret ssl_certificate
@@ -61,11 +61,15 @@ map:
 tts:
   - platform: google
 
-#Spotify
 media_player:
+  #Spotify
   - platform: spotify
     client_id: !secret spotify_client_id
     client_secret: !secret spotify_client_secret
+  #Mopidy Local Streaming Server
+  - platform: mpd
+    host: !secret mpd_host_ip
+    port: !secret mpd_host_port
 
 ##########
 #  All include folders for configuration.yaml
