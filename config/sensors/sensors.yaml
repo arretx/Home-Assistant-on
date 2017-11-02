@@ -1,8 +1,7 @@
 #### TIME/DATE ##################################
-#- platform: time_date
-#  display_options:
-#      - 'time'
-#      - 'date'
+- platform: time_date
+  display_options:
+    - 'time'
 
 - platform: worldclock
   time_zone: America/Phoenix
@@ -12,3 +11,17 @@
 - platform: uptime
   name: Up Time
   unit_of_measurement: hours
+
+- platform: template
+  sensors:
+    solar_elevation:
+      friendly_name: Solar Elevation
+      unit_of_measurement: 'degrees'
+      value_template: '{{states.sun.sun.attributes.elevation}}'
+    solar_azimuth:
+      friendly_name: Solar Azimuth
+      unit_of_measurement: 'degrees'
+      value_template: '{{states.sun.sun.attributes.azimuth}}'
+    time:
+      friendly_name: Current Time
+      value_template: '{{states.sensor.time.state}}'

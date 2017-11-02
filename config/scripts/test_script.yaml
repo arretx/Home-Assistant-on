@@ -1,5 +1,1 @@
-banana:
-  alias: Banana
-  sequence:
-      # This is written using the Script Syntax
-    service: shell_command.Ship_Bell
+

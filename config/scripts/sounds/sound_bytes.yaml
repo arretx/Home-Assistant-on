@@ -1,0 +1,24 @@
+ding:
+    sequence:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.mpd
+        media_content_type: playlist
+        media_content_id: ding
+
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.main
+        volume_level: 1
+chime_1:
+    sequence:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.mpd
+        media_content_type: playlist
+        media_content_id: chime_1
+
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.mpd
+        volume_level: 1

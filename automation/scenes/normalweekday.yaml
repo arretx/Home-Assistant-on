@@ -1,0 +1,5 @@
+scene:
+  name: sunset_lights
+  entities:
+    switch.entertainment_center: on
+    switch.patio_lights: on

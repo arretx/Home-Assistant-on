@@ -1,22 +1,24 @@
-- alias: 'Shut off Entertainment Center Lights 2'
+- alias: 'Normal Weekday Lighting'
   trigger:
-    platform: time
-    minutes: '/1'
-    seconds: 00
+    platform: sun
+    event: sunset
   condition:
     condition: and
     conditions:
+      - condition: time
+        before: '21:00:00'
       - condition: or
         conditions:
-        - condition: time
-          after: '22:00:00'
-        - condition: sun
-          before: sunrise
-      - condition: state
-        entity_id: switch.entertainment_center
-        state: 'on'
+        - condition: state
+          entity_id: 'device_tracker.arretx_jons_phone'
+          state: 'home'
+        - condition: state
+          entity_id: 'device_tracker.bizzerk2_melanies_phone'
+          state: 'home'
   action:
     - delay:
         milliseconds: 2690
-    - service: switch.turn_off
+    - service: switch.turn_on
       entity_id: switch.entertainment_center
+    - service: switch.turn_on
+      entity_id: switch.patio_lights

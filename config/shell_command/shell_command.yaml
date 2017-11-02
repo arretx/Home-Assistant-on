@@ -1,5 +1,5 @@
 shalalakpop: afplay ~/Music/Shalalakpop.aif
-ship_bell: afplay ~/Music/Ship_Bell.mp3
+#ship_bell: afplay ~/Music/Ship_Bell.mp3
 initiating_shutdown_sequence: afplay ~/Music/initiating_shutdown_sequence.aif
 chime_1: afplay ~/Music/chime_1.aif
 chime_2: afplay ~/Music/chime_2.aif
